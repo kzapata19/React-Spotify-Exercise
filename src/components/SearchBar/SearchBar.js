@@ -7,4 +7,8 @@ const SearchBar = (props) => (
   </div>
 );
 
+SearchBar.propTypes = {
+  updateText: PropTypes.func,
+};
+
 export default SearchBar;
