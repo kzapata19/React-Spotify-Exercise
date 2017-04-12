@@ -9,6 +9,7 @@ export default class App extends Component {
     };
   }
 
+
   render() {
     const { initialMessage } = this.state;
     return (
