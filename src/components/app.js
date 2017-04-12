@@ -10,13 +10,15 @@ export default class App extends Component {
       song: '',
     };
   }
-
+  fetchSongs = () => {
+    console.log('Hey I\'m being clicked!');
+  };
   render() {
     const { initialMessage, song } = this.state;
     console.log('song ', song);
     return (
       <div>
-        <SearchBar updateText={(song) => this.setState({ song })} />
+        <SearchBar updateText={(song) => this.setState({ song })} fetchSongs={this.fetchSongs} />
         {initialMessage}
       </div>
     );
