@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import styles from './SeachBar.css';
+import styles from './SearchBar.css';
 
 const SearchBar = (props) => (
   <div className={styles.root}>
