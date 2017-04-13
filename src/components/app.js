@@ -12,6 +12,7 @@ export default class App extends Component {
       initialMessage: 'greeting',
       song: '',
       tracks: {},
+      list: [0, 1, 2, 3, 4],
     };
   }
   fetchSongs = () => {
@@ -20,11 +21,16 @@ export default class App extends Component {
   }
 
   render() {
-    const { tracks } = this.state;
+    const { tracks, list } = this.state;
+
     return (
       <div className={styles.root}>
         <SearchBar updateText={(song) => this.setState({ song })} fetchSongs={this.fetchSongs} />
         {tracks.items && <SongItem songData={tracks.items[0]} />}
+        <div className="listStuff">
+          {list.map(numb => <div key={numb}>{numb}</div>)}
+        </div>
+        <button onClick={() => this.setState({ list: [1, 2, 3, 4, 5] })}>change</button>
       </div>
     );
   }
