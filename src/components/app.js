@@ -20,7 +20,6 @@ export default class App extends Component {
 
   render() {
     const { tracks } = this.state;
-    console.log('tracks', tracks);
     return (
       <div>
         <SearchBar updateText={(song) => this.setState({ song })} fetchSongs={this.fetchSongs} />
